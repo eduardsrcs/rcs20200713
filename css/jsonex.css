@@ -1,0 +1,36 @@
+body{
+  background-color: #ccc;
+}
+
+.comName{
+  font-size: 12px;
+  color: blue;
+}
+
+.users{
+  padding: 5px;
+  transition: .3s;
+}
+
+.users:hover{
+  background-color: #cdf;
+  border-radius: 10px;
+}
+
+.raside>h5{
+  color: darkblue;
+}
+.raside>h5:hover{
+  color: lightblue;
+  cursor: pointer;
+}
+
+.postAuthor span{
+  color: darkblue;
+}
+.postAuthor span:hover{
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
