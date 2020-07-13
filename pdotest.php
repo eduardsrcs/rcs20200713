@@ -20,3 +20,15 @@ catch(PDOException $e){
   echo $e->getMessage();
 }
 
+$name = 'Marija';
+$res = [];
+
+$stmt = $db->prepare("SELECT * FROM users WHERE name = ?");
+
+if ($stmt->execute([$name])) {
+  while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $res[] = $row;
+  }
+}
+
+ddv($res, 0, 1);
