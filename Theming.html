@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Theming</title>
+	<link rel="stylesheet" href="css/themesday.css">
+</head>
+<body>	
+	<h1>Theming</h1>
+	<p>This template uses js to apply dark or light theme to the page</p>
+	<button onclick="changeTheme()">Change theme</button>
+	<script>
+		var tm = new Date()
+		var hour = tm.getHours()
+
+
+		function changeTheme() {
+			var el = document.querySelector('#nighttheme')
+			if(!el){
+				var link = document.createElement('link')
+				link.setAttribute('rel','stylesheet')
+				link.setAttribute('id','nighttheme')
+				link.setAttribute('href', 'css/themesnight.css')
+
+				document.body.appendChild(link)
+			} else {
+				el.remove()
+			}
+			
+
+		}
+	</script>
+</body>
+</html>
